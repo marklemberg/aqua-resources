@@ -1,6 +1,8 @@
 'use strict';
 const AccountDetails = require('./accounts/details/index.jsx');
 const AccountSearch = require('./accounts/search/index.jsx');
+const ResourceDetails = require('./resources/details/index.jsx');
+const ResourceSearch = require('./resources/search/index.jsx');
 const AdminDetails = require('./admins/details/index.jsx');
 const AdminGroupDetails = require('./admin-groups/details/index.jsx');
 const AdminGroupSearch = require('./admin-groups/search/index.jsx');
@@ -38,6 +40,8 @@ const App = (
                 <Route path="/admin/statuses/:id" component={StatusDetails} />
                 <Route exact path="/admin/users" component={UserSearch} />
                 <Route path="/admin/users/:id" component={UserDetails} />
+                <Route exact path="/admin/resources" component={ResourceSearch} />
+                <Route path="/admin/resources/:id" component={ResourceDetails} />
                 <Route component={NotFound} />
             </Switch>
             <Footer />
